@@ -61,7 +61,7 @@ public:
 	}
 	int next() {
 		for (i++; i < G.V(); i++)
-			if (G.adj[v][i] == true) return i;
+			if (G.adj[v][i] == true) return i; // runs though the row of the matrix
 		return -1;
 	}
 	bool end() {
