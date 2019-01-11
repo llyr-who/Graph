@@ -119,6 +119,7 @@
     <ClInclude Include="AdjMatrixGraph.h" />
     <ClInclude Include="AdjMatrixMultiGraph.h" />
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="search.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp" />
