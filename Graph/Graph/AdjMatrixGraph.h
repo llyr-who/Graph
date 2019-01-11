@@ -15,7 +15,7 @@ class AdjMatrixGraph
 	std::vector<std::vector<bool>> adj;
 public:
 	AdjMatrixGraph(int V, bool digraph = false) : adj(V), vertexCount(V), edgeCount(0) {
-		for (auto v : adj) {
+		for (auto&& v : adj) {
 			v.assign(V, false); // this takes time proportional to vertexCount * vertexCount
 		}
 	}

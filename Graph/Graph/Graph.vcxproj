@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClInclude Include="AdjListGraph.h" />
     <ClInclude Include="AdjMatrixGraph.h" />
+    <ClInclude Include="AdjMatrixMultiGraph.h" />
     <ClInclude Include="Edge.h" />
   </ItemGroup>
   <ItemGroup>
