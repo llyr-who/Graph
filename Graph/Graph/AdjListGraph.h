@@ -80,6 +80,6 @@ public:
 		return t ? t->v : -1;
 	}
 	bool end(){
-		return t == 0;
+		return t == NULL;
 	}
 };
