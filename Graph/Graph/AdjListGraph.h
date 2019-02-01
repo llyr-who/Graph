@@ -3,9 +3,10 @@
 #include<vector>
 class AdjListGraph
 {
-	int vertexCount;
-	int edgeCount;
-	bool digraph;
+private:
+  int vertexCount;
+  int edgeCount;
+  bool digraph;
 	struct node
 	{
 		int v; node* next;
