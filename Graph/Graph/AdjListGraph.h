@@ -46,12 +46,10 @@ public:
       t->next = t->next->next;
       delete s;
     }
-    if (!digraph)
-      {
+    if (!digraph){
 	// if the graph is not directed then
 	// we need to remove the other edge.
 	t = adj[w];
-	// ...
       }
   }
   bool edge(int v, int w) const {
