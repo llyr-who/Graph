@@ -1,14 +1,18 @@
 #include<iostream>
-#include "AdjMatrixGraph.h"
-#include "AdjMatrixMultiGraph.h"
 #include "AdjListGraph.h"
 #include "search.h"
 int main()
 {
-	AdjMatrixGraph graph(5,false);
-	Edge e2(1, 3);
-	graph.insert(e2);
-	sPATH<AdjMatrixGraph> s(graph, 1,2);
-	std::cout << s.exists() << std::endl;
-	system("pause");
+  AdjListGraph graph(5);
+  Edge e1(1, 4);
+  Edge e2(0, 3);
+  Edge e3(3, 4);
+  Edge e4(0, 2);
+  graph.insert(e1);
+  graph.insert(e2);
+  graph.insert(e3);
+
+  sPATH<AdjListGraph> s(graph, 1,2);
+  if(s.exists())
+    std::cout << "connection has been found" << std::endl;
 }
