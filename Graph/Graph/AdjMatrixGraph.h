@@ -18,6 +18,12 @@ public:
       v.assign(V, false); // this takes time proportional to vertexCount * vertexCount
     }
   }
+
+  AdjMatrixGraph(AdjMatrixGraph & G) : vertexCount(G.vertexCount),
+				        edgeCount(G.edgeCount),
+				        digraph(G.digraph),
+				        adj(G.adj) {}
+    
   int V() const {
     return vertexCount;
   }

@@ -1,5 +1,8 @@
 #include<vector>
 #include<iostream>
+#include"Stack.h"
+#include"Degree.h"
+// Class definition/decl. for a basic search path
 template<class Graph>
 class sPATH
 {
@@ -25,7 +28,10 @@ private:
     return false;
   }
 
-  // Hamilton path search
+  // Hamilton path search (if d = G.V()-1)
+  // That is, can we find a path between
+  // v and w such that each vertex is visited
+  // exactly once
   bool searchR(int v, int w, int d){
     if(v == w) return (d == 0);
     visited[v] = true;
@@ -41,6 +47,7 @@ private:
     visited[v] = false;
     return false;
   }
+
   
 public:
   sPATH(const Graph&G, int v, int w) :G(G), visited(G.V(), false){
@@ -58,5 +65,31 @@ public:
   }
   bool existsHamil() const{
     return foundHamil;
+  }
+};
+
+// Class Defintion for Euler path.
+// Important: The Graph that we use must have a copy
+// constructor.
+
+// 
+template <typename Graph>
+class ePATH
+{
+private:
+  Graph G;
+  int v,w;
+  bool found;
+  Stack<int> s;
+  int tour(int v);
+public:
+  ePATH(const Graph &G, int v, int w) : G(G), v(v), w(w)
+  {
+    Degree<Graph> deg(G);
+    int t = deg[v] + deg[w];
+    if((t % 2) == 0){
+      found = false;
+      return;
+    }
   }
 };

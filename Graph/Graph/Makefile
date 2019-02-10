@@ -2,7 +2,7 @@ all: source
 
 #For debugging
 OPT=-g -Wall
-OBJECTS=AdjListGraph.h AdjMatrixGraph.h AdjMatrixMultiGraph.h Edge.h search.h
+OBJECTS=AdjListGraph.h AdjMatrixGraph.h AdjMatrixMultiGraph.h Edge.h Degree.h Stack.h search.h
 
 #For optimistaion
 #OPT=-O
